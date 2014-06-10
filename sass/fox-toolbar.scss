@@ -1,0 +1,97 @@
+
+// Variables
+@import "../fox-core/sass/variables.scss";
+
+// Mixins
+@import "../fox-core/sass/mixins.scss";
+
+// Components
+
+fox-toolbar{
+  position: relative;
+  top:0;
+  left:0;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  height: $bar-base-height;
+  width: 100%;
+  background: #f8f8f8;
+  color: #1f1f21;
+  border-bottom: 1px solid #ddd;
+  font-weight: 400;
+  display: inline-block;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  white-space: nowrap;
+  overflow: hidden;
+  word-spacing: 0;
+
+  @include user-select(none);
+  @include box-shadow(none);
+
+  fox-icon {
+    z-index: 20; // Position the buttons on top of .title
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $primary-color;
+  }
+
+  fox-icon.icon{
+    font-size: 1.28em;
+  }
+
+  & > * {
+    line-height: $bar-base-height;
+    position: absolute;
+  }
+
+  & .left{
+    left: 0;
+    padding-left: 5px;
+    text-align: left;    
+    background: #f8f8f8;
+    z-index: 20;
+  }
+
+  & .right{
+    right: 0;
+    margin-right: 5px;
+    text-align: right;
+    background: #f8f8f8;
+    z-index: 20;
+  }
+
+  & > h1{
+    transition: all 400ms;
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    width: 44%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0;
+    left: 28%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f1f21;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 1;
+    z-index: 10;
+  }
+
+  & > h1.prev{
+    color: $primary-color;
+    left: 0;
+    margin-left: 27px;
+    width: 25%;
+    text-align: left !important;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0;
+    z-index: 1;
+  }
+}

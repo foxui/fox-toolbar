@@ -1,0 +1,84 @@
+<fox-element name="fox-toolbar" attributes="title">
+    <script>
+    (function(env){
+        var fox = env.fox;
+
+        function createHeader(title, className) {
+            if (!title) {
+                return;
+            }
+
+            var el = document.createElement('h1');
+            el.innerHTML = title;
+            className && (el.className = className);
+
+            return el;
+        }
+
+        fox('fox-toolbar', {
+            lifecycle: {
+                created: function() {
+
+                    // navigation stacks
+                    this.stacks = [];
+
+                    if (this.title) {
+                        this.appendChild(createHeader(this.title));
+                    }
+                },
+
+                titleChanged: function(oldVal, newVal) {
+                    this.querySelector('h1').innerHTML = newVal;
+                }
+            },
+
+            methods: {
+                // {title:'', id:'', rightDoms: []}
+                push: function(page) {
+                    this.stacks.push(page);
+
+                    var nextHeader = this.querySelector('h1.next');
+
+                    if (!nextHeader) {
+                        nextHeader = createHeader(page.title, 'next');
+                        this.appendChild(nextHeader);
+                    }
+                    else {
+                        nextHeader.innerHTML = page.title;
+                    }
+
+                    // clear expire title
+                    this.querySelector('h1.out').remove();
+
+                    // set current header as prevouis
+                    this.querySelector('h1.prev').classList.add('out');
+
+                    // display new header
+                    nextHeader.classList.remove('next');
+                },
+
+                pop: function() {
+                    if (!this.stacks.length) {
+                        return
+                    }
+
+                    var page = this.stacks.pop();
+
+                    var prevHeader = this.querySelector('h1.prev:not(.out)');
+
+                    if (!nextHeader) {
+                        nextHeader = createHeader(page.title, 'next');
+                        this.appendChild(nextHeader);
+                    }
+                    else {
+                        nextHeader.innerHTML = page.title;
+                    }
+
+                    // clear expire header
+                    this.querySelector('h1.next').remove();
+                }
+            }
+        });
+    })(this);
+    </script>
+</fox>

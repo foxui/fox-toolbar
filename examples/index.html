@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Test of fox-toolbar</title>
+        <link rel="stylesheet" href="../fox-core/dist/foxui.css">
+        <link rel="stylesheet" href="../dist/fox-toolbar.css">
+        <link rel="stylesheet" href="../../fox-icon/dist/fox-icon.css">
+        <script src="../fox-core/dist/foxui.js"></script>
+        <link rel="import" href="../../fox-icon/dist/fox-icon.html"/>
+        <link rel="import" href="../dist/fox-toolbar.html"/>
+        <style>
+        </style>
+    </head>
+    <body>
+        <fox-toolbar title="Long Title Home">
+            <fox-icon icon="icon-bars" class="left"></fox-icon>
+            <fox-icon icon="icon-gear" class="right"></fox-icon>
+        </fox-toolbar>
+
+
+        <fox-toolbar>
+            <fox-icon icon="icon-left-nav" class="left"></fox-icon>
+            <fox-icon icon="icon-compose" class="right"></fox-icon>
+            <h1>Page 2</h1>
+            <h1 class="prev">Page 1</h1>
+        </fox-toolbar>
+
+
+        <fox-toolbar>
+            <label class="left" style="color:#1284ff">取消</label>
+            <label class="right" style="color:#1284ff">发送</label>
+            <h1>发布评论</h1>
+        </fox-toolbar>
+
+
+        <fox-toolbar>
+            <div class="left">
+                <fox-icon icon="icon-bars"></fox-icon>
+            </div>
+            <div class="right">
+                <fox-icon icon="icon-person" style="margin-left:5px;"></fox-icon>
+                <fox-icon icon="icon-home"></fox-icon>
+            </div>
+            <h1>首页</h1>
+        </fox-toolbar>
+
+        <fox-toolbar>
+            <div class="left">
+                <fox-icon icon="icon-bars"></fox-icon>
+            </div>
+            <div class="right">
+                <fox-icon icon="icon-gear"></fox-icon>
+            </div>
+            <h1 onclick="this.lastChild.icon=(this.lastChild.icon=='icon-down'?'icon-up':'icon-down')">全部<fox-icon icon="icon-down" style="font-size:10px;color:#333;margin-left:5px;"></fox-icon></h1>
+        </fox-toolbar>
+    </body>
+</html>
