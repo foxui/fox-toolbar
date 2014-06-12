@@ -49,9 +49,6 @@ fox-toolbar fox-icon
 {
     z-index: 20;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     color: #1284ff;
 }
 fox-toolbar fox-icon.icon
@@ -63,6 +60,7 @@ fox-toolbar > *
     line-height: 44px;
 
     position: absolute;
+    bottom: 1px;
 }
 fox-toolbar .left
 {
@@ -121,7 +119,7 @@ fox-toolbar > h1.prev
     left: 0;
 
     width: 25%;
-    margin-left: 27px;
+    margin-left: 34px;
 
     text-align: left !important;
     text-decoration: none;
