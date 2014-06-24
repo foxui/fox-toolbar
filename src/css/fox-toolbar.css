@@ -1,0 +1,67 @@
+/*!
+ * =====================================================
+ * Foxui v0.1.0 (https://github.com/foxui/fox-toolbar)
+ * Copyright 2014 fex-team
+ * Licensed under BSD (https://github.com/foxui/fox-toolbar/blob/master/LICENSE)
+ *
+ * v0.1.0 designed by @fex-team.
+ * =====================================================
+ */
+
+fox-toolbar fox-icon {
+  z-index: 20;
+  color: #1284ff;
+}
+fox-toolbar fox-icon.icon {
+  font-size: 1.28em;
+}
+fox-toolbar > * {
+  line-height: 44px;
+  position: absolute;
+  bottom: 1px;
+}
+fox-toolbar .left {
+  left: 0;
+  padding-left: 5px;
+  text-align: left;
+  background: #f8f8f8;
+  z-index: 20;
+}
+fox-toolbar .right {
+  right: 0;
+  margin-right: 5px;
+  text-align: right;
+  background: #f8f8f8;
+  z-index: 20;
+}
+fox-toolbar > h1 {
+  transition: all 400ms;
+  position: absolute;
+  bottom: 1px;
+  display: block;
+  width: 44%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0;
+  left: 28%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1f21;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 1;
+  background: #f8f8f8;
+}
+fox-toolbar > h1.prev {
+  color: #1284ff;
+  left: 0;
+  margin-left: 34px;
+  width: 25%;
+  text-align: left !important;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0;
+  z-index: 1;
+}
