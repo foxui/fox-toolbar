@@ -10,7 +10,6 @@
 fox-toolbar{
 
   fox-icon {
-    z-index: 20; // Position the buttons on top of .title
     color: $primary-color;
   }
 
@@ -29,7 +28,6 @@ fox-toolbar{
     padding-left: 5px;
     text-align: left;
     background: #f8f8f8;
-    z-index: 20;
   }
 
   & .right{
@@ -37,7 +35,6 @@ fox-toolbar{
     margin-right: 5px;
     text-align: right;
     background: #f8f8f8;
-    z-index: 20;
   }
 
   & > h1{

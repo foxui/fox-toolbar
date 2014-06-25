@@ -9,7 +9,6 @@
  */
 
 fox-toolbar fox-icon {
-  z-index: 20;
   color: #1284ff;
 }
 fox-toolbar fox-icon.icon {
@@ -25,14 +24,12 @@ fox-toolbar .left {
   padding-left: 5px;
   text-align: left;
   background: #f8f8f8;
-  z-index: 20;
 }
 fox-toolbar .right {
   right: 0;
   margin-right: 5px;
   text-align: right;
   background: #f8f8f8;
-  z-index: 20;
 }
 fox-toolbar > h1 {
   transition: all 400ms;
