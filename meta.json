@@ -1,0 +1,14 @@
+{
+    "dependencies": {
+        "css": [
+            "fox-toolbar/dist/css/fox-toolbar.css"
+        ],
+        "import": [
+            "fox-toolbar/dist/fox-toolbar.html"
+        ]
+    },
+    "name":"fox-toolbar",
+    "type":"component",
+    "attributes":[],
+    "events":[]
+}
