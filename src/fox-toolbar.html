@@ -31,7 +31,14 @@
                 },
 
                 titleChanged: function(oldVal, newVal) {
-                    this.querySelector('h1').innerHTML = newVal;
+                    var titleEl = this.querySelector('h1');
+
+                    if (!titleEl) {
+                        this.appendChild(createHeader(this.title));
+                    }
+                    else {
+                        this.querySelector('h1').innerHTML = newVal;
+                    }
                 }
             },
 
